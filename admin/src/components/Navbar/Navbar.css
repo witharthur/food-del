@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+.logo{
+    font-size: 48px;
+    font-weight: bold;
+    color: tomato;
+    text-transform: lowercase;
+}
+
+.admin-panel{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(87, 79, 79);
+
+
+    margin-left: 80px;
+}
