@@ -1,0 +1,141 @@
+.cart {
+  margin-top: 100px;
+  width: 80%;
+  padding: 20px 20px;
+  margin-left: auto;
+  margin-right: auto; /* Center horizontally */
+
+  flex-direction: column;
+  align-items: center; /* Align items in the center */
+}
+
+.cart-items-title,
+.cart-items-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  justify-content: center; /* Ensure grid content is centered */
+}
+
+.cart-items-title {
+  color: #888;
+  font-size: 14px;
+}
+
+.cart-items-row {
+  border-bottom: 1px solid #eee;
+}
+
+.cart-items-row img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cross {
+  background: none;
+  border: none;
+  color: #888;
+  width: 45%;
+  margin-right: auto;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+hr {
+  height: 1px;
+  background-color: #e2e2e2;
+  border: none;
+}
+
+.cart-item-image {
+  border-radius: 4px;
+  width: 50px;
+  height: 50px;
+}
+.cart-bottom {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  gap: max(12vw, 20vw);
+}
+.cart-total {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.cart-bottom {
+  margin-top: 80px;
+  justify-content: space-between;
+  gap: 20px;
+  
+}
+
+.cart-total {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  /* margin-top: 3px;
+  margin-right: 200px; */
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 10px 0;
+  width: 65%;
+}
+
+.proceed-btn {
+  background-color: #e17055;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+
+.cart-promocode-input {
+  display: flex;
+  width: 66%;
+  margin-top: 10px;
+}
+
+.cart-promocode {
+  margin-top: 47px;
+  
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  padding: 10px;
+  background-color: #e2e2e2;
+  border: 1px solid #e2e2e2;
+}
+
+.cart-promocode-input button {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.cart-total-parent {
+  display: flex;
+  width: 100%;
+  gap: 100px;
+}

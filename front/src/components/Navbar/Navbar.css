@@ -1,0 +1,62 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    margin: 0px auto;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: tomato;
+    /* Tomato red color */
+    text-transform: lowercase;
+}
+
+.logo::after {
+    content: ".";
+    color: tomato
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+    scroll-behavior: smooth;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+
+}
+
+@media (max-width:750px) {
+    .navbar-menu {
+        display: none;
+    }
+
+}
