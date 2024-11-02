@@ -1,13 +1,19 @@
-import add_icon from './add_icon.png';
-import order_icon from './order_icon.png';
-import profile_image from './profile_image.png';
-import upload_area from './upload_area.png';
-import parcel_icon from './parcel_icon.png';
+const importImage = (name) => {
+  try {
+    return new URL(`./${name}.png`, import.meta.url).href;
+  } catch (error) {
+    console.error(`Failed to import image: ${name}.png`, error);
+    return null;
+  }
+};
 
 export const assets = {
-  add_icon,
-  order_icon,
-  profile_image,
-  upload_area,
-  parcel_icon,
+  add_icon: importImage('add_icon'),
+  order_icon: importImage('order_icon'),
+  profile_image: importImage('profile_image'),
+  upload_area: importImage('upload_area'),
+  parcel_icon: importImage('parcel_icon'),
+  list_icon: importImage('list_icon')
 };
+
+console.log('Loaded assets:', assets);

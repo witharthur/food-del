@@ -1,44 +1,45 @@
-import React from 'react'
-import './Footer.css'
-import { assets } from '../../../assets/assets'
+import React from 'react';
+import './Footer.css';
+import { assets } from '../../../assets/assets';
+
 const Footer = () => {
   return (
     <div className='footer' id='footer'>
-        
-        <div className="footer-content">
-            <div className="footer-content-left">
-            <div class="logo">Tomato</div>
-            {/* <img src={assets.footerLogo} alt="" /> */}
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <div className="footer-social-icons">
-                    <img src={assets.facebookIcon} alt="" />
-                    <img src={assets.twitterIcon} alt="" />
-                    <img src={assets.linkedinIcon} alt="" />
-                </div>
-            </div>
-            <div className="footer-content-center">
-                <h2>COMPANY</h2>
-                <ul>
-                    
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Delivery</li>
-                    <li>Privacy policy</li>
-                </ul>
-            </div>
-            <div className="footer-content-right">
-                <h2>GET IN TOUCH</h2>
-                <ul>
-                    <li>+374-99-99-99-99</li>
-                    <li>contact@tomato.com</li>
-                </ul>
-            </div>
-            
+      <div className="footer-content">
+        <div className="footer-content-left">
+          <div className="logo">Tomato</div>
+          <p>
+            At Tomato, we believe that great food starts with the freshest ingredients and a passion for creating dishes that nourish the body and delight the senses. Our philosophy is simple: serve high-quality, seasonal ingredients in ways that highlight their natural flavors, without unnecessary complexity. Every dish at Tomato is crafted with care and attention to detail, bringing out the best in each ingredient.
+            <br />
+            Our menu draws inspiration from Mediterranean traditions, where food is not just about eating but about sharing moments with friends and family. From vibrant salads and rustic pizzas to rich pasta dishes and flavorful entrees, we offer a wide variety of choices that cater to every taste. Whether you’re a fan of hearty classics or looking for something light and fresh, you’ll find something to love at Tomato.
+          </p>
+          <div className="footer-social-icons">
+            <img src={assets.facebookIcon} alt="Facebook" />
+            <img src={assets.twitterIcon} alt="Twitter" />
+            <img src={assets.linkedinIcon} alt="LinkedIn" />
+          </div>
         </div>
+        <div className="footer-content-center">
+          <h2>COMPANY</h2>
+          <ul>
+            <li>Home</li>
+            <li>About us</li>
+            <li>Delivery</li>
+            <li>Privacy policy</li>
+          </ul>
+        </div>
+        <div className="footer-content-right">
+          <h2>GET IN TOUCH</h2>
+          <ul>
+            <li>+374-99-99-99-99</li>
+            <li>contact@tomato.com</li>
+          </ul>
+        </div>
+      </div>
       <hr />
       <p className="footer-copyright">Copyright 2024 Tomato.com</p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

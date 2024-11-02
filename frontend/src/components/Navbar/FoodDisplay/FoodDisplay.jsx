@@ -1,22 +1,26 @@
-import React, { useContext } from 'react';
-import './FoodDisplay.css';
-import { StoreContext } from '../context/StoreContext';
-import FoodItem from '../FoodItem/FoodItem';
+import React, { useContext } from "react";
+import "./FoodDisplay.css";
+import { StoreContext } from "../context/StoreContext";
+import FoodItem from "../FoodItem/FoodItem";
 
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
 
+  if (!food_list.length) {
+    return <div>Loading...</div>; // Show a loader or message while fetching data
+  }
+
   return (
-    <div className='food-display' id='food-display'>
+    <div className="food-display" id="food-display">
       <h2>Top dishes near you</h2>
-      <div className='food-display-list'>
-        {food_list.map((item) => {
-          // Use `item.id` instead of `item._id` and ensure category filtering works
-          if (category === 'All' || category === item.category) {
+      <div className="food-display-list">
+        {food_list.map((item) => {          
+          const itemId = item._id;
+          if (category === "All" || category === item.category) {
             return (
               <FoodItem
-                key={item.id}  // Use `item.id` as the key
-                id={item.id}  // Ensure this matches the ID property in FoodItem
+                key={itemId} 
+                itemId={itemId} 
                 name={item.name}
                 description={item.description}
                 price={item.price}
@@ -24,7 +28,7 @@ const FoodDisplay = ({ category }) => {
               />
             );
           }
-          return null; // Ensure that map always returns something
+          return null;
         })}
       </div>
     </div>

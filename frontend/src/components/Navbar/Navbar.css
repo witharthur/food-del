@@ -11,7 +11,6 @@
     font-size: 48px;
     font-weight: bold;
     color: tomato;
-    /* Tomato red color */
     text-transform: lowercase;
 }
 
@@ -52,6 +51,65 @@
     top: -8px;
     right: -8px;
 
+}
+
+.navbar-profile {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.nav-profile-dropdown {
+    position: absolute;
+    top: 65px;
+    gap: 3px;
+
+    bottom: 1;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: 140px;
+
+}
+
+.nav-profile:hover .nav-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #fff2ef;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    list-style: none;
+
+}
+
+.nav-profile-dropdown li:hover {
+    color: tomato;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.nav-profile-dropdown a {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-profile-dropdown img {
+    margin-right: 1px;
+    height: 20px;
+    width: 20px;
+    margin-right: 8px;
 }
 
 @media (max-width:750px) {

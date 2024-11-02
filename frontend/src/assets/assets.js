@@ -1,45 +1,42 @@
 // Import all assets
-import addIconGreen from './add_icon_green.png';
-import addIconWhite from './add_icon_white.png';
+import addIconGreen from './add_icon_green.webp';
+import addIconWhite from './add_icon_white.webp';
 import appStoreImg from './app_store.jpg';
 import bagIcon from './bag_icon.png';
-import basketIcon from './basket_icon.png';
+import basketIcon from './basket_icon.webp';
 import boxIcon from './box.png';
-import crossIcon from './cross_icon.png';
+import crossIcon from './cross_icon.webp';
 import facebookIcon from './facebook_icon.png';
-import food1Img from './food_1.jpg';
-import food2Img from './food_2.jpg';
-import food3Img from './food_3.jpg';
-import food4Img from './food_4.jpg';
-import food5Img from './food_5.jpg';
-import food6Img from './food_6.jpg';
-import food7Img from './food_7.jpg';
-import food8Img from './food_8.jpg';
-import food9Img from './food_9.jpg';
+import food1Img from './food_1.webp';
+import food2Img from './food_2.webp';
+import food3Img from './food_3.webp';
+import food4Img from './food_4.webp';
+import food5Img from './food_5.webp';
+import food6Img from './food_6.webp';
+import food7Img from './food_7.webp';
+import food8Img from './food_8.webp';
+import food9Img from './food_9.webp';
 import headerImg from './header_img.webp';
 import linkedinIcon from './linkedin_icon.png';
-import logo from './logo.png';
-import footerLogo from './logo_footer.png'
 import logoutIcon from './logout_icon.png';
-import menu1Icon from './menu_1.png';
-import menu2Icon from './menu_2.png';
-import menu3Icon from './menu_3.png';
-import menu4Icon from './menu_4.png';
-import menu5Icon from './menu_5.png';
-import menu6Icon from './menu_6.png';
-import menu7Icon from './menu_7.png';
-import menu8Icon from './menu_8.png';
+import menu1Icon from './menu_1.webp';
+import menu2Icon from './menu_2.webp';
+import menu3Icon from './menu_3.webp';
+import menu4Icon from './menu_4.webp';
+import menu5Icon from './menu_5.webp';
+import menu6Icon from './menu_6.webp';
+import menu7Icon from './menu_7.webp';
+import menu8Icon from './menu_8.webp';
 import plus2Icon from './plus.png'
 import playStoreImg from './play_store.jpg';
 import profileIcon from './profile_icon.png';
 import ratingStarsImg from './rating_stars.jpg';
-import removeIcon from './remove_icon.png';
+import removeIcon from './remove_icon.webp';
 import searchIcon from './search_icon.png';
 import selectorIcon from './selector_icon.png';
 import twitterIcon from './twitter_icon.png';
 
 export const assets = {
-  footerLogo,
   addIconGreen,
   addIconWhite,
   appStoreImg,
@@ -59,7 +56,7 @@ export const assets = {
   food9Img,
   headerImg,
   linkedinIcon,
-  logo,
+ 
   logoutIcon,
   menu1Icon,
   menu2Icon,
