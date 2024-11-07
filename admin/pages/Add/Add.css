@@ -11,7 +11,8 @@
 }
 
 .add-img-upload img {
-    width: 120px;
+    width: 200px;
+
 }
 .add-product-name, .add-product-description{
     width: max(40%,280px);
@@ -19,6 +20,7 @@
 
 .add-product-name input, .add-product-description textarea{
     padding: 10px;
+    border-radius: 2px;
 }
 
 .add-catefory-price{
@@ -29,6 +31,7 @@
 .add-catefory-price select, .add-catefory-price input{
     max-width: 120px;
     padding: 10px;
+    border-radius: 2px;
 }
 
 .add-btn{
@@ -38,4 +41,5 @@
     background-color: black;
     color: white;
     cursor: pointer;
+    border-radius: 2px;
 }

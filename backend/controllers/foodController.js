@@ -7,13 +7,10 @@ import path from "path";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Add Food Handler
 const addFood = async (req, res) => {
   try {
-    // Use req.file.filename to get the uploaded file name
     let image_filename = req.file.filename;
 
-    // Create a new food document
     const food = new foodModel({
       name: req.body.name,
       description: req.body.description,
@@ -22,7 +19,6 @@ const addFood = async (req, res) => {
       image: image_filename,
     });
 
-    // Save the food document to the database
     await food.save();
     res.json({ success: true, message: "Food Added" });
   } catch (error) {
@@ -31,7 +27,6 @@ const addFood = async (req, res) => {
   }
 };
 
-// List Food Handler
 const listFood = async (req, res) => {
   try {
     const foods = await foodModel.find({});
@@ -42,10 +37,9 @@ const listFood = async (req, res) => {
   }
 };
 
-// Remove Food Handler
 const removeFood = async (req, res) => {
   try {
-    const foodId = req.body.id; // Получаем ID из тела запроса
+    const foodId = req.body.id;
     console.log("Received ID:", foodId);
 
     const food = await foodModel.findById(foodId);
@@ -59,10 +53,8 @@ const removeFood = async (req, res) => {
     const imagePath = path.join(__dirname, "../uploads", food.image);
     console.log("Image path:", imagePath);
 
-    // Удаляем изображение
     await fs.promises.unlink(imagePath);
 
-    // Удаляем элемент из базы данных
     await foodModel.findByIdAndDelete(foodId);
 
     res.json({ success: true, message: "Food Removed" });

@@ -3,6 +3,7 @@ import jwt from "jsonwebtoken";
 const authMiddleware = async (req, res, next) => {
     // Check if the token is present in the headers
     const token = req.headers.token;
+console.log(req.headers);
 
     // If no token is provided, respond with a 401 Unauthorized status
     if (!token) {

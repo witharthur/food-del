@@ -20,13 +20,13 @@ import headerImg from './header_img.webp';
 import linkedinIcon from './linkedin_icon.png';
 import logoutIcon from './logout_icon.png';
 import menu1Icon from './menu_1.webp';
-import menu2Icon from './menu_2.webp';
-import menu3Icon from './menu_3.webp';
-import menu4Icon from './menu_4.webp';
+import menu2Icon from './menu_7.webp';
+import menu3Icon from './menu_8.webp';
+import menu4Icon from './menu_3.webp';
 import menu5Icon from './menu_5.webp';
 import menu6Icon from './menu_6.webp';
-import menu7Icon from './menu_7.webp';
-import menu8Icon from './menu_8.webp';
+import menu7Icon from './menu_2.webp';
+import menu8Icon from './menu_4.webp';
 import plus2Icon from './plus.png'
 import playStoreImg from './play_store.jpg';
 import profileIcon from './profile_icon.png';
@@ -82,31 +82,31 @@ export const menu_list = [
     menu_image: menu1Icon,  // Reference the actual imported image
   },
   {
-    menu_name: "Pizza",
+    menu_name: "Rolls",
     menu_image: menu2Icon,
   },
   {
-    menu_name: "Burger",
+    menu_name: "Deserts",
     menu_image: menu3Icon,
   },
   {
-    menu_name: "Pasta",
+    menu_name: "Sandwich",
     menu_image: menu4Icon,
   },
   {
-    menu_name: "Steak",
+    menu_name: "Cake",
     menu_image: menu5Icon,
   },
   {
-    menu_name: "Fish",
+    menu_name: "Pure Vag",
     menu_image: menu6Icon,
   },
   {
-    menu_name: "Sushi",
+    menu_name: "Pasta",
     menu_image: menu7Icon,
   },
   {
-    menu_name: "Dessert",
+    menu_name: "Noodles",
     menu_image: menu8Icon,
   },
 ];

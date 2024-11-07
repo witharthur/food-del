@@ -8,7 +8,7 @@ const foodSchema = new mongoose.Schema({
   category: { type: String, required: true },
 });
 
-// Replace 'menu_items' with your desired collection name
+
 const foodModel = mongoose.models.food || mongoose.model("foods", foodSchema);
 
 export default foodModel;

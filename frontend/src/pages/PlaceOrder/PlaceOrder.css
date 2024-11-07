@@ -1,26 +1,23 @@
 .place-order {
     display: flex;
-    align-items: flex-start; /* Aligns the top of the sections */
+    align-items: flex-start;
     justify-content: center;
     gap: 50px;
     width: 100%;
     margin-top: 100px;
 }
 
-/* Adjusting the width of the left section */
 .place-order-left {
     width: 100%;
-    max-width: 600px; /* Adjust to desired width */
+    max-width: 600px;
 }
 
-/* Adjusting the title */
 .place-order-left .title {
     font-size: 30px;
     font-weight: 600;
-    margin-bottom: 30px; /* Adjusted margin for better spacing */
+    margin-bottom: 30px;
 }
 
-/* Input field styles */
 .place-order-left .input {
     margin-bottom: 15px;
     width: 100%;
@@ -30,51 +27,41 @@
     outline-color: tomato;
 }
 
-/* Flexbox for the grouped input fields */
 .place-order-left .multi-fields {
     display: flex;
     gap: 10px;
 }
 
 .place-order-left .multi-fields .input {
-    width: 50%; /* Ensure inputs in rows take 50% of the width */
+    width: 50%;
 }
 
-/* Cart totals section on the right */
 .place-order-right {
     width: 100%;
-    max-width: 500px; /* Adjust width to make it smaller than left section */
+    max-width: 500px;
 }
 
-/* Cart total container */
 .cart-total {
-    
-    
     padding: 20px;
-    
 }
 
-/* Heading for the cart totals */
 .cart-total h2 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-/* Each row in the cart total section */
 .cart-total-details {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
 }
 
-/* Styling for the labels and values */
 .cart-total-details p,
 .cart-total-details b {
     font-size: 16px;
 }
 
-/* Button styles */
 .cart-total button {
     margin-top: 30px;
     padding: 10px 20px;
@@ -86,7 +73,6 @@
     font-weight: bold;
 }
 
-/* Button hover effect */
 .cart-total button:hover {
     background-color: #e64a19;
 }

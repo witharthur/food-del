@@ -120,7 +120,7 @@ const Navbar = ({ setShowLogin }) => {
                         </Link>
                         {dropdownOpen && (
                             <div className="nav-profile-dropdown">
-                                <Link to="#"><img src={assets.bagIcon} alt="" />Orders</Link>
+                                <Link to="/myorders"><img src={assets.bagIcon} alt="" />Orders</Link>
                                 <hr />
                                 <Link to="#" onClick={handleLogout}><img src={assets.logoutIcon}></img>Log Out</Link>
                             </div>
