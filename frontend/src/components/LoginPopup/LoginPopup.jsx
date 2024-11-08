@@ -17,8 +17,8 @@ const LoginPopup = ({ setShowLogin }) => {
     setError("");
 
     const url = isLogin
-      ? "http://localhost:4000/api/user/login"
-      : "http://localhost:4000/api/user/register";
+      ? "https://food-del-t1rl.onrender.com/api/user/login"
+      : "https://food-del-t1rl.onrender.com/api/user/register";
     const body = isLogin ? { email, password } : { name, email, password };
 
     try {
