@@ -10,7 +10,6 @@ const Navbar = ({ setShowLogin }) => {
     const [dropdownOpen, setDropdownOpen] = useState(false); 
     const { cartItems, token, logout } = useContext(StoreContext);
 
-    // Check if the cart is empty by summing up quantities
     const checkIfCartIsEmpty = useCallback(() => {
         return !Object.values(cartItems).some(quantity => quantity > 0);
     }, [cartItems]);
