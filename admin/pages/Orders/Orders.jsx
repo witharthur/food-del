@@ -38,7 +38,7 @@ const statusHendler = async (event, orderId, backendUrl, setOrders) => {
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
-  const backendUrl = "http://localhost:4000";
+  const backendUrl = "https://food-del-t1rl.onrender.com";
   useEffect(() => {
     const getAllOrders = async () => {
       const allOrders = await fetchAllOrders(backendUrl);
