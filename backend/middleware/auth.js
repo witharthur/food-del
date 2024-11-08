@@ -5,7 +5,6 @@ const authMiddleware = async (req, res, next) => {
     const token = req.headers.token;
 console.log(req.headers);
 
-    // If no token is provided, respond with a 401 Unauthorized status
     if (!token) {
         return res.status(401).json({ success: false, message: "Not Authorized. Please log in again." });
     }
