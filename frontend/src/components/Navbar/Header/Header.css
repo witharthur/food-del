@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --min-header-height: 27.5rem; /* 440px in rem */
+}
+
 .header {
     height: auto;
-    min-height: 440px; /* Adjust this value as needed */
-
+    min-height: clamp(20rem, 50vh, var(--min-header-height));
     overflow: hidden;
     display: flex;
+    object-fit: cover;
     align-items: center;
-    padding: 4vw;
-    border-radius: 25px;
-    width: 80%;
-    margin: 15px auto;
+    box-shadow: 0px 0px 10px #00000015;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: 15px 15px 15px 15px;
+    width: min(89%, 75rem); /* More responsive width */
+    margin: clamp(0.75rem, 2vw, 0.9375rem) auto;
     position: relative;
 }
 
@@ -20,37 +25,36 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 100%; /* Adjust this value to control how much of the container the image covers */
+    width: 100%;
     background: url('/header_img.webp') no-repeat center right;
     background-size: cover;
 }
 
 .header-contents {
     display: flex;
-    margin-left: 35px;
+    margin-left: clamp(1.5rem, 3vw, 2.1875rem); /* 35px in rem */
     flex-direction: column;
     align-items: start;
-    gap: 1.5vw;
+    gap: clamp(1rem, 1.5vw, 1.5rem);
     max-width: 50%;
     position: relative;
     z-index: 1;   
     animation: fadeIn 3s; 
-    transform: none;
-    transform: scale(1.02); /* Correct usage of scale() within transform */
+    transform: scale(1.02);
 }
 
 .header-contents h2 {
     font-weight: 450;
     color: white;
-    font-size: max(3.5vw, 28px);
+    font-size: clamp(1.75rem, 3.5vw, 3.5rem); /* More controlled scaling */
     margin: 0;
-    font-family: OutFit,sans-serif;
+    font-family: 'Outfit', sans-serif;
     line-height: 1.2;
 }
 
 .header-contents p {
     color: white;
-    font-size: max(1vw, 14px);
+    font-size: clamp(0.875rem, 1vw, 1.125rem); /* Responsive font size */
     margin: 0;
     line-height: 1.5;
 }
@@ -59,33 +63,57 @@
     border: none;
     color: #333;
     font-weight: 600;
-    padding: 0.8vw 2vw;
+    padding: clamp(0.5rem, 0.8vw, 1rem) clamp(1rem, 2vw, 2rem);
     background-color: white;
-    font-size: max(1vw, 14px);
-    border-radius: 25px;
+    font-size: clamp(0.875rem, 1vw, 1.125rem);
+    border-radius: clamp(1rem, 2vw, 1.5625rem);
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .header-contents button:hover {
     background-color: #f0f0f0;
 }
 
-@media (max-width: 1050px){
-
-    .header-contents{
+/* Responsive Breakpoints */
+@media (max-width: 65.625rem) { /* 1050px */
+    .header-contents {
         max-width: 45%;
     }
 }
 
-@media (max-width:750px){
-    .header-contents{
+@media (max-width: 46.875rem) { /* 750px */
+    .header {
+        min-height: clamp(15rem, 40vh, 20rem);
+    }
+
+    .header-contents {
         max-width: 65%;
     }
-    .header-contents p{
-    display: none;}
+    
+    .header-contents p {
+        display: none;
+    }
+    
     .header-contents button {
-        padding:  2vw 4vw;
+        padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1.5rem, 4vw, 2.5rem);
+    }
 
+    .header-contents h2 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+}
+
+/* Additional breakpoint for smaller devices */
+@media (max-width: 30rem) { /* 480px */
+    .header {
+        width: 85%;
+        padding: 1rem;
+        min-height: clamp(12rem, 35vh, 15rem);
+    }
+
+    .header-contents {
+        margin-left: 1rem;
+        max-width: 75%;
     }
 }

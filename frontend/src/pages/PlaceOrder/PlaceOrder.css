@@ -3,7 +3,7 @@
     align-items: flex-start;
     justify-content: center;
     gap: 50px;
-    width: 100%;
+    width: auto;
     margin-top: 100px;
 }
 
@@ -29,7 +29,7 @@
 
 .place-order-left .multi-fields {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .place-order-left .multi-fields .input {
@@ -75,4 +75,46 @@
 
 .cart-total button:hover {
     background-color: #e64a19;
+}
+
+/* Media Queries for mobile */
+@media screen and (max-width: 768px) {
+    .place-order {
+        flex-direction: column;
+        gap: 20px; /* Adjusted gap for smaller screens */
+        margin-left: 5%; /* Relative left margin */
+        margin-right: 5%; /* Relative right margin */
+    }
+
+    .place-order-left .multi-fields .input {
+        width: 100%; /* Full width for inputs on small screens */
+    }
+
+    .place-order-left .title {
+        font-size: 2rem; /* Adjusted font size for smaller screens */
+    }
+
+    .cart-total button {
+        width: 100%; /* Full width for button on small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .place-order {
+        margin-left: 5%; /* Maintain relative margin on very small screens */
+        margin-right: 5%; /* Maintain relative margin on very small screens */
+        margin-top: 3rem; /* Adjust top margin for small screens */
+    }
+
+    .place-order-left .title {
+        font-size: 1.6rem; /* Reduced font size for smaller screens */
+    }
+
+    .cart-total h2 {
+        font-size: 1.3rem; /* Adjusted heading size for small screens */
+    }
+
+    .cart-total button {
+        font-size: 1rem; /* Adjusted button font size */
+    }
 }

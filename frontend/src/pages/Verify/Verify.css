@@ -1,20 +1,44 @@
-.verify{
-    min-height: 60vh;
+.verify {
+    min-height: 60vh; /* Relative height based on viewport height */
     display: grid;
+    place-items: center; /* Center content within the grid */
 }
 
-.verify .spinner{
-    width: 100px;
-    height: 100px;
+.verify .spinner {
+    width: clamp(5rem, 10vw, 6.25rem); /* Responsive width with minimum, preferred, and maximum values */
+    height: clamp(5rem, 10vw, 6.25rem); /* Responsive height with minimum, preferred, and maximum values */
     place-self: center;
-    border: 5px solid #bdbdbd;
+    border: clamp(0.3125rem, 0.625vw, 0.3125rem) solid #bdbdbd; /* Responsive border width */
     border-top-color: tomato;
     border-radius: 50%;
     animation: rotate 1s infinite;
 }
 
-@keyframes rotate{
-    100%{
+@keyframes rotate {
+    100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Optional: Add responsive adjustments for smaller screens */
+@media screen and (max-width: 48rem) {
+    .verify {
+        min-height: 50vh; /* Adjust height on medium screens */
+    }
+
+    .verify .spinner {
+        width: clamp(4rem, 8vw, 5rem); /* Slightly smaller spinner on smaller screens */
+        height: clamp(4rem, 8vw, 5rem); /* Adjust height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 30rem) {
+    .verify {
+        min-height: 40vh; /* Further adjust height for small screens */
+    }
+
+    .verify .spinner {
+        width: clamp(3rem, 6vw, 4rem); /* Adjust spinner size for small screens */
+        height: clamp(3rem, 6vw, 4rem); /* Adjust spinner size for small screens */
     }
 }

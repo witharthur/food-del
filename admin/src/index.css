@@ -1,32 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+/* Reset and base styles */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
-}
-body{
-  min-height: 100vh;
-  background-color: #fcfcfc;
+  font-family: 'Outfit', sans-serif;
 }
 
-a{
+/* Make root font-size responsive */
+:root {
+  font-size: 16px;
+}
+
+/* Responsive body */
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* For mobile browsers */
+  background-color: #fcfcfc;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Links */
+a {
   text-decoration: none;
   color: inherit;
 }
-hr{
+
+/* Horizontal rule */
+hr {
   border: none;
-  height: 1px;
+  height: 0.0625rem; /* 1px */
   background-color: #a9a9a9;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
-.app-content{
+/* Layout containers */
+.app-content {
   display: flex;
-  
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
 }
-.flex-col{
+
+.flex-col {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0.625rem; /* 10px */
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 1024px) {
+  :root {
+    font-size: 15px;
+  }
+  
+  .app-content {
+    padding: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  .app-content {
+    padding: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: 13px;
+  }
+  
+  .app-content {
+    padding: 0.625rem;
+  }
+}
+
+/* For extremely small screens */
+@media screen and (max-width: 320px) {
+  :root {
+    font-size: 12px;
+  }
 }

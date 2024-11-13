@@ -1,50 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: Outfit;
-}
-body{
-  min-height: 100vh;
-}
-a{
-  text-decoration: none;
-  color: inherit;
-}
-.app{
-  width: 100%;
-  margin: auto;
+/* Root font size for easier rem calculations */
+:root {
+    font-size: 16px; /* Base font size */
 }
 
-.navbar-right{
-  display: flex;
-  align-items: center;
-  gap: 40px;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
 }
 
-.navbar button{
-  background: transparent;
-  font-size: 16px;
-  color: #49557e;
-  border: 1px solid tomato;
-  padding: 10px 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: 0.3s;
+body {
+    min-height: 100vh;
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem); /* Smooth scaling */
 }
 
-.navbar button:hover{
-  background-color: #fff4f2;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.app {
+    width: 100%;
+    margin: auto;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 2rem); /* More responsive gap */
+}
+
+.navbar button {
+    background: transparent;
+    font-size: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+    color: #49557e;
+    border: 0.0625rem solid tomato; /* 1px */
+    padding: clamp(0.5rem, 1vw + 0.25rem, 0.625rem) clamp(1rem, 2vw + 0.5rem, 1.875rem);
+    border-radius: 3rem; /* Adjusted to relative rem */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #fff4f2;
 }
 
 @keyframes fadeIn {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-  
+    0% {
+        opacity: 0;
+        transform: translateY(-0.625rem); /* Subtle movement */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

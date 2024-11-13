@@ -1,45 +1,128 @@
-.add{
-    width: 70%;
-    margin-left: max(5vw, 25px);
-    margin-top: 50px;
+/* Add container */
+.add {
+    width: clamp(18.75rem, 70%, 50rem); /* 300px - 800px */
+    margin-left: clamp(1.5625rem, 5vw, 3.125rem); /* 25px - 50px */
+    margin-top: clamp(2rem, 5vh, 3.125rem); /* 32px - 50px */
     color: #6d6d6d;
-    font-size: 16px;
-}
-
-.add form{
-    gap: 20px;
-}
-
-.add-img-upload img {
-    width: 200px;
-
-}
-.add-product-name, .add-product-description{
-    width: max(40%,280px);
-}
-
-.add-product-name input, .add-product-description textarea{
-    padding: 10px;
-    border-radius: 2px;
-}
-
-.add-catefory-price{
+    font-size: clamp(0.875rem, 1vw, 1rem); /* 14px - 16px */
+  }
+  
+  /* Form layout */
+  .add form {
+    gap: clamp(1rem, 2vw, 1.25rem); /* 16px - 20px */
     display: flex;
-    gap: 30px;
-}
-
-.add-catefory-price select, .add-catefory-price input{
-    max-width: 120px;
-    padding: 10px;
-    border-radius: 2px;
-}
-
-.add-btn{
-    max-width: 120px;
+    flex-direction: column;
+  }
+  
+  /* Image upload */
+  .add-img-upload img {
+    width: clamp(12.5rem, 30vw, 18.75rem); /* 200px - 300px */
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Product name and description fields */
+  .add-product-name,
+  .add-product-description {
+    width: clamp(17.5rem, 40%, 25rem); /* 280px - 400px */
+  }
+  
+  /* Input and textarea styles */
+  .add-product-name input,
+  .add-product-description textarea {
+    padding: clamp(0.5rem, 1vh, 0.625rem); /* 8px - 10px */
+    border-radius: 0.125rem;
+    width: 100%;
+    border: 1px solid #d1d1d1;
+    font-size: inherit;
+  }
+  
+  /* Category and price container */
+  .add-catefory-price {
+    display: flex;
+    gap: clamp(1rem, 3vw, 1.875rem); /* 16px - 30px */
+    flex-wrap: wrap;
+  }
+  
+  /* Category and price inputs */
+  .add-catefory-price select,
+  .add-catefory-price input {
+    max-width: clamp(7.5rem, 15vw, 12.5rem); /* 120px - 200px */
+    padding: clamp(0.5rem, 1vh, 0.625rem);
+    border-radius: 0.125rem;
+    border: 1px solid #d1d1d1;
+    font-size: inherit;
+  }
+  
+  /* Submit button */
+  .add-btn {
+    max-width: clamp(7.5rem, 15vw, 12.5rem); /* 120px - 200px */
     border: none;
-    padding: 10px;
+    padding: clamp(0.5rem, 1vh, 0.625rem);
     background-color: black;
     color: white;
     cursor: pointer;
-    border-radius: 2px;
-}
+    border-radius: 0.125rem;
+    font-size: inherit;
+    transition: background-color 0.2s ease;
+  }
+  
+  .add-btn:hover {
+    background-color: #333;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 48rem) { /* 768px */
+    .add {
+      width: 90%;
+      margin-left: 1rem;
+    }
+    
+    .add-product-name,
+    .add-product-description {
+      width: 100%;
+    }
+    
+    .add-catefory-price {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .add-catefory-price select,
+    .add-catefory-price input {
+      max-width: 100%;
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 30rem) { /* 480px */
+    .add {
+      width: 95%;
+      margin-left: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .add-img-upload img {
+      width: 100%;
+      max-width: 12.5rem;
+    }
+    
+    .add-btn {
+      width: 100%;
+      max-width: none;
+    }
+  }
+  
+  /* Touch device optimization */
+  @media (hover: none) {
+    .add-btn {
+      padding: clamp(0.625rem, 2vh, 0.75rem);
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .add-btn {
+      transition: none;
+    }
+  }
