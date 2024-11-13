@@ -8,5 +8,3 @@ This application allows users to log in or register and place orders with ease. 
 **Payment:** Stripe integration for secure and easy payment transactions.
 
 
-**User Interface** [ https://food-del-frontend-qaqz.onrender.com/](url)
-**Admin Panel** [https://food-del-admin-7bek.onrender.com/](url)
