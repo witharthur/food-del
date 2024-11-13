@@ -1,34 +1,119 @@
+/* List table grid container */
 .list-table-format {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
     align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    border: 1px solid #a9a9a9;
-    border-radius: 2px;
-    font-size: 13px
-}
-
-.food-image {
-    width: 50px;
+    gap: clamp(0.5rem, 1vw, 0.625rem); /* 8px - 10px */
+    padding: clamp(0.625rem, 1.5vh, 0.75rem) clamp(0.75rem, 2vw, 0.9375rem); /* 10-12px 12-15px */
+    border: 0.0625rem solid #a9a9a9; /* 1px */
+    border-radius: 0.125rem; /* 2px */
+    font-size: clamp(0.75rem, 1vw, 0.8125rem); /* 12px - 13px */
+    width: 100%;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Food image styles */
+  .food-image {
+    width: clamp(2.5rem, 5vw, 3.125rem); /* 40px - 50px */
     height: auto;
-}
-
-.list-table-format.title {
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.125rem;
+  }
+  
+  /* Title row styles */
+  .list-table-format.title {
     background-color: #f9f9f9;
-}
-
-.cursor {
+    font-weight: 600;
+  }
+  
+  /* Cursor pointer */
+  .cursor {
     cursor: pointer;
-}
-
-@media (max-width: 600px) {
+    transition: opacity 0.2s ease;
+  }
+  
+  .cursor:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive layouts */
+  @media (max-width: 64rem) { /* 1024px */
     .list-table-format {
-        grid-template-columns: 1fr 3fr 1fr;
-        gap: 15px;
+      gap: clamp(0.375rem, 1vw, 0.5rem);
+      padding: clamp(0.5rem, 1.5vh, 0.625rem);
     }
-
+  }
+  
+  @media (max-width: 48rem) { /* 768px */
+    .list-table-format {
+      font-size: clamp(0.6875rem, 0.9vw, 0.75rem);
+    }
+  }
+  
+  @media (max-width: 37.5rem) { /* 600px */
+    .list-table-format {
+      gap: clamp(0.75rem, 2vw, 0.9375rem);
+      padding: clamp(0.5rem, 2vh, 0.625rem);
+    }
+  
     .list-table-format.title {
-        display: none;
+      display: none;
     }
-}
+  
+    .food-image {
+      width: clamp(2rem, 4vw, 2.5rem); /* 32px - 40px */
+    }
+  }
+  
+  /* Small screens */
+  @media (max-width: 30rem) { /* 480px */
+    .list-table-format {
+      gap: 0.5rem;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+  
+  /* Touch device optimization */
+  @media (hover: none) {
+    .cursor {
+      transition: none;
+    }
+    
+    .list-table-format {
+      padding: clamp(0.75rem, 2vh, 1rem); /* Larger touch targets */
+    }
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .list-table-format,
+    .cursor {
+      transition: none;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (forced-colors: active) {
+    .list-table-format {
+      border: 0.125rem solid CanvasText;
+    }
+    
+    .list-table-format.title {
+      background-color: Canvas;
+      border-bottom: 0.125rem solid CanvasText;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .list-table-format {
+      border: 0.0625rem solid #000;
+      break-inside: avoid;
+    }
+    
+    .cursor {
+      cursor: default;
+    }
+  }

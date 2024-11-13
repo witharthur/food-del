@@ -1,29 +1,25 @@
-.app-download{
-    margin: auto auto;
-    margin-top: 100px;
-    margin-bottom: 70px;
-    font-size: max(3vw, 20px);
+.app-download {
+    margin: 0 auto;
+    margin-block: clamp(2rem, 8vh, 6rem);  /* More fluid top/bottom margins */
+    font-size: clamp(1.25rem, 3vw, 2.5rem);  /* Smooth font scaling */
     text-align: center;
+    width: min(90%, 1200px);  /* Responsive width with maximum */
 }
 
-.app-download-platforms{
+.app-download-platforms {
     display: flex;
     justify-content: center;
-    gap: max(2vw, 10px);
-    
-    margin-top: 40px;
-
+    gap: clamp(0.625rem, 2vw, 1.5rem);  /* Fluid gap spacing */
+    margin-top: clamp(1.5rem, 4vh, 3rem);  /* Responsive top margin */
 }
+
 .app-download-platforms img {
     transition: transform 0.3s ease;
-    width: max(25vw, 80px);
+    width: clamp(5rem, 25vw, 12rem);  /* More controlled image scaling */
+    height: auto;  /* Maintain aspect ratio */
     cursor: pointer;
 }
 
 .app-download-platforms img:hover {
-    transform: scale(1.02); /* Correct usage of scale() within transform */
+    transform: scale(1.02);
 }
-
-
- 
-

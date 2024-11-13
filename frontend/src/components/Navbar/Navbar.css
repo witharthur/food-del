@@ -1,14 +1,14 @@
 .navbar {
-    padding: 20px 0px;
+    padding: clamp(1rem, 2.5vw, 1.25rem) 0;
     display: flex;
-    margin: 0px auto;
-    width: 80%;
+    margin: 0 auto;
+    width: min(79.5%, 80rem); /* More responsive width */
     justify-content: space-between;
     align-items: center;
 }
 
 .navbar .logo {
-    font-size: 48px;
+    font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
     font-weight: bold;
     color: tomato;
     text-transform: lowercase;
@@ -16,21 +16,20 @@
 
 .logo::after {
     content: ".";
-    color: tomato
+    color: tomato;
 }
 
 .navbar-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: clamp(1rem, 2vw, 1.25rem); /* Responsive gap */
     color: #49557e;
-    font-size: 18px;
-
+    font-size: clamp(1rem, 1.5vw, 1.125rem); /* Responsive font size */
 }
 
 .navbar .active {
-    padding-bottom: 2px;
-    border-bottom: 2px solid #49557e;
+    padding-bottom: 0.125rem; /* 2px in rem */
+    border-bottom: 0.125rem solid #49557e;
     scroll-behavior: smooth;
 }
 
@@ -39,82 +38,89 @@
 }
 
 .navbar-search-icon {
-    position: relative
+    position: relative;
 }
 
 .navbar-search-icon .dot {
     position: absolute;
-    min-width: 10px;
-    min-height: 10px;
+    min-width: 0.625rem; /* 10px in rem */
+    min-height: 0.625rem;
     background-color: tomato;
-    border-radius: 5px;
-    top: -8px;
-    right: -8px;
-
+    border-radius: 0.3125rem; /* 5px in rem */
+    top: -0.5rem; /* -8px in rem */
+    right: -0.5rem;
 }
 
 .navbar-profile {
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem; /* 24px in rem */
+    height: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
-
 }
 
 .nav-profile-dropdown {
     position: absolute;
-    top: 65px;
-    gap: 3px;
-
+    top: clamp(3.5rem, 5vw, 4.0625rem); /* Responsive top position */
+    gap: 0.1875rem; /* 3px in rem */
     bottom: 1;
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 10px;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: clamp(0.625rem, 1.5vw, 0.75rem);
     display: flex;
     flex-direction: column;
     z-index: 1;
-    width: 140px;
-
+    width: clamp(8.75rem, 15vw, 10rem); /* Responsive width */
 }
 
 .nav-profile:hover .nav-profile-dropdown {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem; /* 10px in rem */
     background-color: #fff2ef;
-    padding: 12px 25px;
-    border-radius: 4px;
-    border: 1px solid tomato;
+    padding: clamp(0.75rem, 2vw, 1.5625rem); /* Responsive padding */
+    border-radius: 0.25rem;
+    border: 0.0625rem solid tomato; /* 1px in rem */
     list-style: none;
-
 }
 
 .nav-profile-dropdown li:hover {
     color: tomato;
-    gap: 2px;
+    gap: 0.125rem; /* 2px in rem */
     cursor: pointer;
 }
 
 .nav-profile-dropdown a {
     display: flex;
     align-items: center;
-    padding: 8px 0;
+    padding: 0.5rem 0; /* 8px in rem */
     text-decoration: none;
     color: #333;
 }
 
 .nav-profile-dropdown img {
-    margin-right: 1px;
-    height: 20px;
-    width: 20px;
-    margin-right: 8px;
+    margin-right: 0.0625rem; /* 1px in rem */
+    height: clamp(1.25rem, 2vw, 1.5rem); /* Responsive height */
+    width: clamp(1.25rem, 2vw, 1.5rem); /* Responsive width */
+    margin-right: 0.5rem; /* 8px in rem */
 }
 
-@media (max-width:750px) {
+/* Media Queries with relative units */
+@media (max-width: 46.875rem) { /* 750px in rem */
     .navbar-menu {
         display: none;
     }
+}
 
+/* Add additional breakpoints for better responsiveness */
+@media (max-width: 36rem) { /* 576px */
+    .navbar {
+        width: 85%;
+        padding: 0.75rem 0;
+    }
+    
+    .nav-profile-dropdown {
+        right: 0;
+    }
 }
