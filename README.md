@@ -7,7 +7,6 @@ This application allows users to log in or register and place orders with ease. 
 **Database:** MongoDB for secure storage of user data and order information.
 **Payment:** Stripe integration for secure and easy payment transactions.
 
-[**User Interface**]([url](https://food-del-frontend-qaqz.onrender.com/))
+https://food-del-frontend-qaqz.onrender.com/
 
-
-[**Admin Panel** ]([url](https://food-del-admin-7bek.onrender.com/))
+https://food-del-admin-7bek.onrender.com/
