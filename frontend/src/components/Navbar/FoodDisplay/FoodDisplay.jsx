@@ -7,7 +7,7 @@ const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
 
   if (!food_list.length) {
-    return <div>Loading...</div>; // Show a loader or message while fetching data
+    return 
   }
 
   return (
