@@ -14,7 +14,7 @@
     box-shadow: 0px 0px 10px #00000015;
     padding: clamp(1.5rem, 4vw, 3rem);
     border-radius: 15px 15px 15px 15px;
-    width: min(89%, 75rem); /* More responsive width */
+    width: min(89%, 96rem); /* More responsive width */
     margin: clamp(0.75rem, 2vw, 0.9375rem) auto;
     position: relative;
 }
