@@ -107,9 +107,10 @@
 /* Additional breakpoint for smaller devices */
 @media (max-width: 30rem) { /* 480px */
     .header {
-        width: 85%;
+        width: 100%;
         padding: 1rem;
         min-height: clamp(12rem, 35vh, 15rem);
+        border-radius: 0px;
     }
 
     .header-contents {
