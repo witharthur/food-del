@@ -213,7 +213,7 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-Your Name - Initial work
+Arthur Dadalian 
 
 ## 🙏 Acknowledgments
 
